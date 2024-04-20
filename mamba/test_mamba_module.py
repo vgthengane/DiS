@@ -10,6 +10,7 @@ model = Mamba(
     d_conv=4,    # Local convolution width
     expand=2,    # Block expansion factor
     use_fast_path=False,
+    bimamba_type="v2"
 ).to("cuda")
 y = model(x)
 assert y.shape == x.shape
